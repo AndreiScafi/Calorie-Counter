@@ -36,3 +36,14 @@ function isInvalidInput(str) {
 }
 
 // End of searching invalid inpunts
+
+// Add Entry
+
+function addEntry() {
+    /* const targetId = "#" + entryDropdown.value;
+    const targetInputContainer = document.querySelector(targetId + ' .input-container'); */
+
+    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+}
+// End of Add Entry
