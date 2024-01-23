@@ -58,3 +58,22 @@ function addEntry() {
 
 addEntryButton.addEventListener('click', addEntry);
 // End of Add Entry
+
+// Getting calories from inputs
+
+function getCaloriesFromInputs(list) {
+    let calories = 0;
+
+    for (let i = 0; i < list.length; i++) {
+        const currVal = cleanInputString(list[i].value);
+        const invalidInputMatch = isInvalidInput(currVal);
+        if (invalidInputMatch) {
+            alert(`Invalid Input: ${invalidInputMatch[0]}`);
+            isError = true;
+            return null;
+        }
+        calories += Number(currVal);
+    }
+    return calories;
+}
+// End of getting calories from inputs
